@@ -1,10 +1,14 @@
 # Autonomous-SnakeByte
-This is a self-playing AI-assisted coded using o3 mini-High or later showing fairly robust coding competence
+This is a self-playing AI-assisted coded using o3 mini-High or later showing fairly robust coding competence using pygame (and some stuff for timer and sounds) as a library
+
 snake_game<ver>.py is the latest iteration which has all the self-corrections from o3 model.
 
 In particular, the first prototype snake_game.py was very good but simplistic.
 snake_game2.py introduced constraints i.e. random blockers appearing every second which the snake must evade and also introduced the notion of the snake evading itself 
 snake_game2b.py is a minor modification to include a sound (.wav) for every apple eaten but at this time we noticed the BFS algorithm took priority on evasive tactics for not running into a brick and it ended up not eating any apples. It did not die due to collision but it lost from starvation.
+
+**Snake Game Screen Shot of a 20x20 grid**
+snake is green, apples are red (single category for now), and bricks are purple
 
 ![image](https://github.com/user-attachments/assets/34d9b2a8-354f-4994-8f56-674410c3366e)
 
