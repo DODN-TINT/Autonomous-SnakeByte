@@ -4,9 +4,9 @@ import struct
 
 # Parameters for the sound
 sample_rate = 44100         # Samples per second
-duration = 0.5              # Duration in seconds (adjust as desired)
+duration = 0.75              # Duration in seconds (adjust as desired)
 n_samples = int(sample_rate * duration)
-frequency = 150.0           # Base frequency in Hz (try tweaking this)
+frequency = 35.0           # Base frequency in Hz (try tweaking this)
 
 # Create a time array for one burst
 t = np.linspace(0, duration, n_samples, endpoint=False)
@@ -34,7 +34,7 @@ if max_val > 0:
 signal_int16 = np.int16(signal * 32767)
 
 # Write the data to a WAV file
-with wave.open("burp.wav", "w") as wf:
+with wave.open("crash.wav", "w") as wf:
     n_channels = 1
     sampwidth = 2  # 2 bytes per sample for 16-bit audio
     wf.setnchannels(n_channels)
@@ -42,4 +42,4 @@ with wave.open("burp.wav", "w") as wf:
     wf.setframerate(sample_rate)
     wf.writeframes(signal_int16.tobytes())
 
-print("burp.wav generated successfully!")
+print("crash.wav generated successfully!")
