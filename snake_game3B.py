@@ -110,7 +110,7 @@ def main():
     pygame.init()
     pygame.mixer.init()
 
-    # Load sounds.
+      # Load sounds.
     try:
         chirp_sound = pygame.mixer.Sound("chirp.wav")
     except pygame.error:
@@ -165,7 +165,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
 
-        # ===== AI DECISION MAKING =====
+         # AI usinBFS Algorithm
         # Prioritize following a direct path to the apple.
         path_to_fruit = bfs(snake[0], fruit_pos, snake, traps)
         if path_to_fruit is not None:
