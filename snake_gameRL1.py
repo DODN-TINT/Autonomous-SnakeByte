@@ -259,8 +259,12 @@ if __name__ == "__main__":
     from stable_baselines3 import DQN
 
     # Create the DQN model using a multilayer perceptron (MLP) policy.
-    model = DQN("MlpPolicy", env, verbose=1)
-
+    # model = DQN("MlpPolicy", env, verbose=1)   
+    # EPA = leverage tensorboard for visualization  02/03/2025 7:22 pm
+    #    remember to start the log before your model learns to log all training metrics
+    #    then in a terminal run the ff. command while opening a browser to view the tensorboard
+    #           tensorboard --logdir ./dqn_tensorboard/
+    model = DQN("MlpPolicy", env, verbose=1,tensorboard_log="./dqn_tensorboard/")
     # Train the model for a specified number of timesteps.
     total_timesteps = 100000  # Adjust as needed.
     model.learn(total_timesteps=total_timesteps)
